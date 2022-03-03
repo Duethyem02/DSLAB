@@ -31,9 +31,10 @@ struct poly* insert(struct poly*p,int c,int e)                    //inserting te
 }
 
 
-struct poly* add_poly(struct poly*a,struct poly*a1,struct poly*a2)    //addition
+struct poly* add_poly(struct poly*a1,struct poly*a2)    //addition
 {
 	int c;int e;
+	struct poly*a=NULL;
 	while(a1!=NULL && a2!=NULL)
 	{
 		if(a1->e == a2->e)
@@ -116,7 +117,7 @@ int main()
  printf("\nPolynomial 2:");
  display(p2);
  printf("\nResult:");
- p=add_poly(p,p1,p2);
+ p=add_poly(p1,p2);
  display(p);
  return 0;
 }
