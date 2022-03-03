@@ -44,21 +44,51 @@ void display(struct poly*h)				//display
 }
 
 
-struct poly* mlp_poly(struct poly*a,struct poly*a1,struct poly*a2)
+void modify(struct poly*p)                     //simplifying resultant polynomial
+{
+	struct poly*temp,*current,*todelete;
+	temp=p;
+	while(temp!=NULL)
+	{
+		current=temp;
+ 		while(current->next!=NULL)
+ 		{
+ 			if(current->next->e==temp->e)
+ 			{
+ 			 temp->c=temp->c+current->next->c;
+ 			 todelete=current->next;
+ 			 current->next=todelete->next;
+ 			 todelete->next=NULL;
+ 			 free(todelete);
+ 			 todelete=NULL;
+ 			}
+ 			current=current->next;
+ 		}
+ 		temp=temp->next;
+ 	}
+ 	temp=NULL;
+ 	current=NULL;
+}
+ 
+ 
+struct poly* mlp_poly(struct poly*a1,struct poly*a2)   //multiplication
 {
  int c;int e;
+ struct poly*p2 = a2;
+ struct poly*a = NULL;
  while(a1!=NULL)
  {
-  	while(a2!=NULL)
+  	while(p2!=NULL)
   	{
-  		c=a1->c*a2->c;
-  		e=a1->c+c2->c;
-  		a2=a2->next;
+  		c=a1->c*p2->c;
+  		e=a1->e+p2->e;
   		a=insert(a,c,e);
+  		p2=p2->next;
   	}
+  	p2=a2;
   	a1=a1->next;
  }
- 
+ modify(a);
  return a;
 }  
 
@@ -94,7 +124,8 @@ int main()
  printf("\nPolynomial 2:");
  display(p2);
  printf("\nResult:");
- p=mlp_poly(p,p1,p2);
+ p=mlp_poly(p1,p2);
  display(p);
  return 0;
 }
+
