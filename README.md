@@ -9,7 +9,7 @@ Different data structures using c programming language
 
 8.Infix to postfix using stack  
 
-9.Queue using array and linked list
+9.Evaluation of postfix using stack
 
 
 
