@@ -1,5 +1,5 @@
 # DSLAB 
-To implement data structures using c programming language 
+Different data structures using c programming language 
 # Experiment Lists: 
 5.Polynomial addition and multiplication using linked list  
 
