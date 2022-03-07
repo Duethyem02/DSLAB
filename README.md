@@ -11,7 +11,13 @@ Different data structures using c programming language
 ##### 8.Infix to postfix using stack  
 
 ##### 9.Evaluation of postfix using stack
+ 
+##### 10.Queue using linkedlist and array 
 
+##### 11.Quick Sort(Recursive) 
 
+##### 12.Merge Sort (Recursive) 
 
-
+##### 13.Quick Sort & Merge Sort(Non-recursive) 
+ 
+##### 14.Heap Sort
