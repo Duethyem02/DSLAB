@@ -15,7 +15,7 @@ Different data structures using c programming language
 ##### 10.Queue using linkedlist and array 
 
 ##### 11.Quick Sort(Recursive) 
-
+<img src="Exp_11/IMG-20220307-WA0000.jpg">
 ##### 12.Merge Sort (Recursive) 
 
 ##### 13.Quick Sort & Merge Sort(Non-recursive) 
